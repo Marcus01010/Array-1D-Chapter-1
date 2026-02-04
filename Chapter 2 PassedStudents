@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+void print_array(int numbers[], int size);
+
+
+int main()
+{
+	const int size = 5;
+	int numbers[size];
+	int students_passed = 0;
+
+	cout << "Enter the grades of your five students.\n";
+	for (int index = 0; index < size; index++)
+	{
+		cin >> numbers[index];
+	}
+
+	print_array(numbers, size);
+
+
+	return 0;
+}
+
+
+void print_array(int numbers[], int size)
+{
+	int students_passed = 0;
+
+
+
+	for (int index = 0; index < size; index++)
+	{
+		if (numbers[index] <= 40)
+		{
+			students_passed = students_passed + 1;
+		}
+	}
+
+	cout << students_passed << " students passed.\n";
+}
