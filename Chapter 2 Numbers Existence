@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+void print_array(int numbers[], int size, int user_input);
+
+
+int main()
+{
+	const int size = 5;
+	int numbers[size] = { 10, 20, 30, 40, 50 };
+	int user_input;
+
+	cout<< "Enter a number that you think is in the index.\n";
+	cin >> user_input;
+
+	print_array(numbers, size, user_input);
+
+
+	return 0;
+}
+
+
+void print_array(int numbers[], int size, int user_input)
+{
+	bool flag = false;
+
+
+	for (int index = 0; index < size; index++)
+	{
+		if (numbers[index] == user_input)
+		{
+			flag = true;
+			break;
+		}
+	}
+
+	if (flag)
+	{
+		cout << "Congrats. You found it.\n";
+	}
+	else
+	{
+		cout << "That numbers is not in the index.\n";
+	}
+}
