@@ -15,7 +15,7 @@ int main()
 	{
 		cout << "Enter the details for Student " << (index + 1) << endl;
 
-		cout << "Enter roll number: ";
+		cout << "Enter roll number: " ;
 		cin >> students[index].roll_number;
 
 		cin.ignore();
